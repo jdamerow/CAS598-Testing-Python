@@ -38,10 +38,16 @@ jobs:
     - name: Test with unittest
       run: |
         python -m unittest temps_test.py
+    - name: Run coverage
+      run: |
+        coverage run -m unittest temps_test
+    - name: Create xml report
+      run: |
+        coverage xml
     - name: Get Cover 
       uses: orgoro/coverage@v3.2
       with:
-         coverageFile: path/to/coverage.xml
+         coverageFile: coverage.xml
          token: ${{ secrets.GITHUB_TOKEN }}
 
 
