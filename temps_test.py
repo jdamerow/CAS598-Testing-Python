@@ -27,6 +27,6 @@ class TestTempFunctions(unittest.TestCase):
     def test_sort_temperatures_floating_points(self):
         measurements = [99.2, 95, 100.3, 98.1, 0]
         low, normal, high = temps.sort_temperatures(measurements)
-        self.assertEqual(low, [0, 95])
+        self.assertEqual(low, [95, 0])
         self.assertEqual(normal, [98.1])
         self.assertEqual(high, [99.2, 100.3])
