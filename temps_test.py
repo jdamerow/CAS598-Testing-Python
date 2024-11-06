@@ -4,7 +4,7 @@ import temps
 class TestTempFunctions(unittest.TestCase):
 
     def test_sort_temperatures(self):
-     measurements = [96, 97, 99, 100]
+        measurements = [96, 97, 99, 100]
         low, normal, high = temps.sort_temperatures(measurements)
         self.assertEqual(low, [96])
         self.assertEqual(normal, [97, 99])
