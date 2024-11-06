@@ -23,4 +23,5 @@ def convert_from_fahrenheit(temps):
     for temp in temps:
         results.append((temp-32)/1.8)
 
+    print("converted")
     return results
